@@ -93,7 +93,10 @@ export default function CartPage() {
           )}
           {cartProducts?.length > 0 &&
             cartProducts.map((product, index) => (
-              <div className="flex items-center gap-4 border-b py-4">
+              <div
+                className="flex items-center gap-4 border-b py-4"
+                key={index}
+              >
                 <div className="w-24">
                   <Image
                     width={240}
@@ -125,7 +128,6 @@ export default function CartPage() {
 
                 <div className="ml-2">
                   <button
-                    key={index}
                     type="button"
                     onClick={() => removeCartProduct(index)}
                     className="p-2"
