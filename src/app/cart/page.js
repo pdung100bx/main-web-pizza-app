@@ -123,7 +123,7 @@ export default function CartPage() {
                   ${cartProductPrice(product)}
                 </div>
 
-                <div className="ml-2">
+                <div className="ml-2" key={index}>
                   <button
                     type="button"
                     onClick={() => removeCartProduct(index)}
